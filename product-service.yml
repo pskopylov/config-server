@@ -1,0 +1,32 @@
+spring:
+  profiles: default
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:mysql://mysql-product-service:3306/product-service?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: microservice-user
+    password: kJkSzPj
+  jpa:
+    properties:
+      hibernate:
+        connection:
+          charSet: UTF-8
+          hbm2ddl:
+            import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+      show_sql: false
+eureka:
+  instance:
+    appname: product-service
+    initial-status: STARTING
+    metadata-map:
+      version: v1
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://eureka-server:9001/eureka
+    healthcheck:
+      enabled: true
+server:
+  port: 8082
