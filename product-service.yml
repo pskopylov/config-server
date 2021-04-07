@@ -1,5 +1,6 @@
 spring:
-  profiles: default
+  profiles: 
+    active: default
   application:
     name: product-service
   datasource:
