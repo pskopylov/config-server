@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: monolith
+  datasource:
+    url: jdbc:mysql://mysql-monolith-service:3306/monolith?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: microservice-user
+    password: kJkSzPj
+  jpa:
+    properties:
+      hibernate:
+        connection:
+          charSet: UTF-8
+          hbm2ddl:
+            import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+      show_sql: false
+      cache:
+        use_query_cache: false
+        use_second_level_cache: false
+  http:
+    multipart:
+      max-file-size: 1500KB
+      max-request-size: 1500KB
+
+app:
+  name: monolith
+
+jwt:
+  header: Authentication
+  expires_in: 86400
+  secret: sgd34bwfAbfSBPpe0r8gwbg
+#  cookie: AUTH-TOKEN
+
+eureka:
+  instance:
+    appname: monolith
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-server:9001/eureka
+
+service:
+  product:
+    application:
+      name: product-service
