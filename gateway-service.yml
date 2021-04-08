@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/product/**, /group/**
+        - id: monolith
+          uri: lb://monolith
+          predicates:
+            - Path=/cart/**, /order/**
+eureka:
+  instance:
+    appname: gateway-service
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:9001/eureka
+server:
+  port: 8762
