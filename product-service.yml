@@ -29,5 +29,9 @@ eureka:
       defaultZone: http://eureka-server:9001/eureka
     healthcheck:
       enabled: true
+service:
+  recommendation:
+    application:
+      name: recommendation-service
 server:
   port: 8081
