@@ -6,7 +6,6 @@ spring:
 eureka:
   instance:
     appname: recommendation-service
-    initial-status: STARTING
     metadata-map:
       version: v1
   client:
