@@ -31,7 +31,9 @@ eureka:
       enabled: true
 service:
   recommendation:
-    default-products: 7, 9
+    default-products:
+      - 7
+      - 9
     application:
       name: recommendation-service
 server:
