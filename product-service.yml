@@ -34,7 +34,7 @@ feign:
    enabled: true
 service:
   recommendation:
-    defaultProducts: 7, 9
+    defaultProducts: 7,9
     application:
       name: recommendation-service
 server:
