@@ -24,7 +24,7 @@ eureka:
       version: v1
   client:
     registerWithEureka: true
-    fetchRegistry: false
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://eureka-server:9001/eureka
     healthcheck:
