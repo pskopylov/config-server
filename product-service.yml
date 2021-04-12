@@ -29,6 +29,9 @@ eureka:
       defaultZone: http://eureka-server:9001/eureka
     healthcheck:
       enabled: true
+feign:
+ hystrix:
+   enabled: true
 service:
   recommendation:
     defaultProducts: 7, 9
