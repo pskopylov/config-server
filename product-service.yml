@@ -39,5 +39,8 @@ service:
       - 9
     application:
       name: recommendation-service
+  statistic:
+    application:
+      name: statistic-service
 server:
   port: 8081
