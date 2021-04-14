@@ -1,0 +1,17 @@
+spring:
+  profiles: 
+    active: default
+  application:
+    name: statistic-service
+eureka:
+  instance:
+    appname: statistic-service
+    metadata-map:
+      version: v1
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://eureka-server:9001/eureka
+server:
+  port: 8090
