@@ -28,5 +28,6 @@ eureka:
       defaultZone: http://eureka-server:9001/eureka
 kafka:
   bootstrapAddress: 'localhost:9092'
+  topic: statistic-topic
 server:
   port: 8090
