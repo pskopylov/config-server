@@ -20,8 +20,7 @@ spring:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: test-consumer-group
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
         spring:
           json:
