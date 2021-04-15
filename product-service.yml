@@ -21,10 +21,9 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        delivery:
-          timeout:
-            ms: 20000
+      request:
+        timeout:
+          ms: 30000
 eureka:
   instance:
     appname: product-service
