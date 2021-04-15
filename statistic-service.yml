@@ -26,5 +26,7 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-server:9001/eureka
+kafka:
+  bootstrapAddress: 'localhost:9092'
 server:
   port: 8090
