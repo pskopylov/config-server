@@ -17,7 +17,7 @@ spring:
             import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
       show_sql: false
   kafka:
-    bootstrap-servers: 'localhost:9092'
+    bootstrap-servers: 'kafka:9092'
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
