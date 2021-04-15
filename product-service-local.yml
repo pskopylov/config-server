@@ -1,0 +1,57 @@
+spring:
+  profiles: 
+    active: default
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/product-service?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: microservice-user
+    password: kJkSzPj
+  jpa:
+    properties:
+      hibernate:
+        connection:
+          charSet: UTF-8
+          hbm2ddl:
+            import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+      show_sql: false
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      request:
+        timeout:
+          ms: 60000
+eureka:
+  instance:
+    appname: product-service
+    initial-status: STARTING
+    metadata-map:
+      version: v1
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka
+    healthcheck:
+      enabled: true
+feign:
+ hystrix:
+   enabled: true
+service:
+  recommendation:
+    defaultProducts: 
+      - 7
+      - 9
+    application:
+      name: recommendation-service
+  statistic:
+    application:
+      name: statistic-service
+kafka:
+  bootstrapAddress: 'localhost:9092'
+  topic: statistic-topic
+server:
+  port: 8081
