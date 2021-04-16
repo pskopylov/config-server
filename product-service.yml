@@ -32,10 +32,7 @@ eureka:
     healthcheck:
       enabled: true
 feign:
- hystrix:
-   enabled: true
-ribbon:
-  eureka:
+  hystrix:
     enabled: true
 service:
   recommendation:
