@@ -34,6 +34,9 @@ eureka:
 feign:
  hystrix:
    enabled: true
+ribbon:
+  eureka:
+    enabled: true
 service:
   recommendation:
     defaultProducts: 
