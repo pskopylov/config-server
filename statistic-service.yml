@@ -7,8 +7,8 @@ spring:
       group-id: test-consumer-group
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
         properties:
-          "[spring.json.value.default.type]": com.epam.mentoring.model.StatisticMessage
-          "[spring.json.trusted.packages]": com.epam.mentoring.model
+          "[spring.json.value.default.type]": "com.epam.mentoring.model.StatisticMessage"
+          "[spring.json.trusted.packages]": "com.epam.mentoring.model"
 eureka:
   instance:
     appname: statistic-service
