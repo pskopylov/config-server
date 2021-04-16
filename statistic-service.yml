@@ -1,14 +1,6 @@
 spring:
   application:
     name: statistic-service
-  kafka:
-    bootstrap-servers: localhost:9092
-    consumer:
-      group-id: test-consumer-group
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      properties:
-        "[spring.json.value.default.type]": "com.epam.mentoring.model.StatisticMessage"
-        "[spring.json.trusted.packages]": "com.epam.mentoring.model"
 eureka:
   instance:
     appname: statistic-service
@@ -20,6 +12,8 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka-server:9001/eureka
 kafka:
+  bootstrap-address: kafka-server:9092
+  group-id: test-consumer-group
   topic: statistic-topic
 server:
   port: 8090
