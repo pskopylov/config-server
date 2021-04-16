@@ -45,7 +45,6 @@ service:
     application:
       name: statistic-service
 kafka:
-  bootstrapAddress: 'localhost:9092'
   topic: statistic-topic
 server:
   port: 8081
