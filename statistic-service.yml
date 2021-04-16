@@ -1,32 +1,6 @@
 spring:
-  profiles: 
-    active: default
   application:
     name: statistic-service
-  datasource:
-    url: jdbc:mysql://mysql-statistic-service:3306/statistic?serverTimezone=UTC
-    driver-class-name: com.mysql.jdbc.Driver
-    username: microservice-user
-    password: kJkSzPj
-  jpa:
-    properties:
-      hibernate:
-        connection:
-          charSet: UTF-8
-          hbm2ddl:
-            import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
-      show_sql: false
-  kafka:
-    bootstrap-servers: kafka:9092
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        spring:
-          json:
-            value:
-              default:
-                type: com.epam.mentoring.model.StatisticMessage
 eureka:
   instance:
     appname: statistic-service
@@ -38,7 +12,6 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka-server:9001/eureka
 kafka:
-  bootstrapAddress: 'localhost:9092'
+  bootstrap-address: kafka-server:9092
+  group-id: test-consumer-group
   topic: statistic-topic
-server:
-  port: 8090
