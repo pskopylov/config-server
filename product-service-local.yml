@@ -57,5 +57,3 @@ service:
       url: localhost:8088
 kafka:
   topic: statistic-topic
-server:
-  port: 8081
