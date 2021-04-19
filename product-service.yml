@@ -57,5 +57,3 @@ service:
       url: availability-service:8080
 kafka:
   topic: statistic-topic
-server:
-  port: 8081
