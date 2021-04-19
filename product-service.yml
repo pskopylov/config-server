@@ -47,7 +47,7 @@ service:
   availability:
     application:
       name: availability-service
-      url: availability-service:8088
+      url: availability-service:8080
 kafka:
   topic: statistic-topic
 server:
