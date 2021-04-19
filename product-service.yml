@@ -44,6 +44,10 @@ service:
   statistic:
     application:
       name: statistic-service
+  availability:
+    application:
+      name: availability-service
+      url: localhost:8088
 kafka:
   topic: statistic-topic
 server:
