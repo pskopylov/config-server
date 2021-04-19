@@ -1,16 +1,4 @@
 spring:
-  profile:
-    active: default
-server:
-  port: 8081
----
-spring:
-  profile:
-    active: other
-server:
-  port: 8082
----
-spring:
   application:
     name: product-service
   datasource:
