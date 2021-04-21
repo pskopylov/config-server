@@ -11,6 +11,12 @@ eureka:
       defaultZone: http://localhost:9001/eureka
     healthcheck:
       enabled: true
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
 service:
   product:
     application:
