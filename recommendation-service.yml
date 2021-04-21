@@ -13,5 +13,3 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-server:9001/eureka
-server:
-  port: 8085
