@@ -30,4 +30,4 @@ service:
   availability:
     application:
       name: availability-service
-      url: lovalhost:8088
+      url: localhost:8088
