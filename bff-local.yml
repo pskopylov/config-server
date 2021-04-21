@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: bff
+eureka:
+  instance:
+    appname: bff
+    metadata-map:
+      version: v1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka
+    healthcheck:
+      enabled: true
+service:
+  product:
+    application:
+      name: product-service
+  discount:
+    application:
+      name: discount-service
+  recommendation:
+    defaultProducts: 
+      - 7
+      - 9
+    application:
+      name: recommendation-service
+  statistic:
+    application:
+      name: statistic-service
+  availability:
+    application:
+      name: availability-service
+      url: lovalhost:8088
