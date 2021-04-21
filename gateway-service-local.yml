@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: bff
+          uri: lb://bff
+          predicates:
+            - Path=/product/**
+        - id: monolith
+          uri: lb://monolith
+          predicates:
+            - Path=/cart/**, /order/**
+eureka:
+  instance:
+    appname: gateway-service
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka
