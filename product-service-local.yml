@@ -31,29 +31,9 @@ eureka:
       defaultZone: http://localhost:9001/eureka
     healthcheck:
       enabled: true
-feign:
- hystrix:
-   enabled: true
-hystrix:
-    command:
-        default:
-            execution:
-                isolation:
-                    thread:
-                        timeoutInMilliseconds: 10000
 service:
-  recommendation:
-    defaultProducts: 
-      - 7
-      - 9
-    application:
-      name: recommendation-service
   statistic:
     application:
       name: statistic-service
-  availability:
-    application:
-      name: availability-service
-      url: localhost:8088
 kafka:
   topic: statistic-topic
