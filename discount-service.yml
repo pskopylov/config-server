@@ -2,7 +2,7 @@ spring:
   application:
     name: discount-service
   datasource:
-    url: jdbc:mysql://localhost:3308/discount-service?serverTimezone=UTC
+    url: jdbc:mysql://mysql-discount-service:3306/discount-service?serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
     username: microservice-user
     password: kJkSzPj
