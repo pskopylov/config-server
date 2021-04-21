@@ -11,6 +11,16 @@ eureka:
       defaultZone: http://eureka-server:9001/eureka
     healthcheck:
       enabled: true
+feign:
+ hystrix:
+   enabled: true
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 10000
 service:
   product:
     application:
@@ -24,9 +34,6 @@ service:
       - 9
     application:
       name: recommendation-service
-  statistic:
-    application:
-      name: statistic-service
   availability:
     application:
       name: availability-service
