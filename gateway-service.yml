@@ -1,23 +1,17 @@
 spring:
-  profiles:
-    active: default
   application:
     name: gateway-service
   cloud:
     gateway:
       routes:
-        - id: product-service
-          uri: lb://product-service
+        - id: bff
+          uri: lb://bff
           predicates:
-            - Path=/product/**, /group/**
+            - Path=/product/**
         - id: monolith
           uri: lb://monolith
           predicates:
             - Path=/cart/**, /order/**
-        - id: discount-service
-          uri: lb://discount-service
-          predicates:
-            - Path=/discount/**
 eureka:
   instance:
     appname: gateway-service
