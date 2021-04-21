@@ -12,8 +12,13 @@ eureka:
     healthcheck:
       enabled: true
 feign:
- hystrix:
-   enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+  hystrix:
+    enabled: true
 hystrix:
     command:
         default:
