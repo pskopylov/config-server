@@ -39,9 +39,6 @@ service:
       - 9
     application:
       name: recommendation-service
-  statistic:
-    application:
-      name: statistic-service
   availability:
     application:
       name: availability-service
