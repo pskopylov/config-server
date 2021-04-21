@@ -1,0 +1,15 @@
+spring:
+  profiles: 
+    active: default
+  application:
+    name: recommendation-service
+eureka:
+  instance:
+    appname: recommendation-service
+    metadata-map:
+      version: v1
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka
