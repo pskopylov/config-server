@@ -14,11 +14,13 @@ spring:
           uri: lb://monolith
           predicates:
             - Path=/cart/**, /order/**
+        - id: discount-service
+          uri: lb://discount-service
+          predicates:
+            - Path=/discount/**
 eureka:
   instance:
     appname: gateway-service
   client:
     serviceUrl:
       defaultZone: http://eureka-server:9001/eureka
-server:
-  port: 8762
