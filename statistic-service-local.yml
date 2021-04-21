@@ -15,5 +15,3 @@ kafka:
   bootstrap-address: localhost:9092
   group-id: test-consumer-group
   topic: statistic-topic
-server:
-  port: 8090
