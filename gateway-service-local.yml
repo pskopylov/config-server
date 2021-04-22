@@ -12,9 +12,21 @@ spring:
           uri: lb://monolith
           predicates:
             - Path=/cart/**, /order/**
+        - id: security-service
+          uri: lb://security-service
+          predicates:
+            - Path=/auth  
 eureka:
   instance:
     appname: gateway-service
   client:
     serviceUrl:
       defaultZone: http://localhost:9001/eureka
+jwt:
+  header: Authentication
+  expires_in: 86400
+  secret: sgd34bwfAbfSBPpe0r8gwbg
+service:
+  security:
+    application:
+      url: /auth
