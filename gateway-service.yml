@@ -22,6 +22,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka-servcer:9001/eureka
+jwt:
+  header: Authentication
+  expires_in: 86400
+  secret: sgd34bwfAbfSBPpe0r8gwbg
 service:
   security:
     application:
