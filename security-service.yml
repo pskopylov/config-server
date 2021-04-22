@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: security-service
+jwt:
+  header: Authentication
+  expires_in: 86400
+  secret: sgd34bwfAbfSBPpe0r8gwbg
+
+eureka:
+  instance:
+    appname: security-service
+  client:
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://eureka-server:9001/eureka
