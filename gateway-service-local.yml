@@ -15,22 +15,27 @@ spring:
         - id: security-service
           uri: lb://security-service
           predicates:
-            - Path=/auth  
+            - Path=/auth
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8091/auth/realms/SpringBootKeycloak
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8180/auth/realms/SpringBootKeycloak
+            user-name-attribute: paul
+        registration:
+          keycloak:
+            client-id: gateway-service
+            client-secret: sgd34bwfAbfSBPpe0r8gwbg
 eureka:
   instance:
     appname: gateway-service
   client:
     serviceUrl:
       defaultZone: http://localhost:9001/eureka
-jwt:
-  header: Authentication
-  expires_in: 86400
-  secret: sgd34bwfAbfSBPpe0r8gwbg
-keycloak:
-  auth-server-url: http://localhost:8091/auth
-  realm: SpringBootKeycloak
-  resource: ecommerce-app
-  public-client: true
 service:
   security:
     application:
