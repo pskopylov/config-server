@@ -18,11 +18,11 @@ spring:
             - Path=/auth
   security:
     oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8091/auth/realms/ecommerce
+          jwk-set-uri: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/certs
       client:
-        resourceserver:
-          jwt:
-            issuer-uri: http://localhost:8091/auth/realms/ecommerce
-            jwk-set-uri: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/certs
         provider:
           keycloak:
             issuer-uri: http://localhost:8091/auth/realms/ecommerce
