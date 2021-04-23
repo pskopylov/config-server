@@ -25,7 +25,10 @@ spring:
       client:
         provider:
           keycloak:
-            issuer-uri: http://localhost:8091/auth/realms/ecommerce
+            authorization-uri: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/auth
+            token-uri: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/token
+            user-info-uri: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/userinfo
+            jwk-set-uri: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/certs
             user-name-attribute: preferred_username
         registration:
           keycloak:
