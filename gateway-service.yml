@@ -26,6 +26,11 @@ jwt:
   header: Authentication
   expires_in: 86400
   secret: sgd34bwfAbfSBPpe0r8gwbg
+keycloak:
+  auth-server-url: http://keycloak:8091/auth
+  realm: SpringBootKeycloak
+  resource: ecommerce-app
+  public-client: true
 service:
   security:
     application:
