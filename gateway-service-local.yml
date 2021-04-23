@@ -25,7 +25,7 @@ spring:
         provider:
           keycloak:
             issuer-uri: http://localhost:8091/auth/realms/SpringBootKeycloak
-            user-name-attribute: paul
+            user-name-attribute: preferred_username
         registration:
           keycloak:
             client-id: gateway-service
