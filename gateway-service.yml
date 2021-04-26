@@ -15,7 +15,22 @@ spring:
         - id: security-service
           uri: lb://security-service
           predicates:
-            - Path=/auth  
+            - Path=/auth
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8091/auth/realms/ecommerce
+          jwk-set-uri: http://keycloak:8091/auth/realms/ecommerce/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://keycloak:8091/auth/realms/ecommerce
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: gateway-service
+            client-secret: b0ac3d95-8201-4f4d-bd69-93cffdd83d8a
 eureka:
   instance:
     appname: gateway-service
