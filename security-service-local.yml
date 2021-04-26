@@ -13,3 +13,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:9001/eureka
+service:
+  auth:
+    url: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/token
