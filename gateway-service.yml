@@ -30,7 +30,7 @@ spring:
         registration:
           keycloak:
             client-id: gateway-service
-            client-secret: b0ac3d95-8201-4f4d-bd69-93cffdd83d8a
+            client-secret: 8b977c93-16c9-4456-a051-18dae15c285a
 eureka:
   instance:
     appname: gateway-service
