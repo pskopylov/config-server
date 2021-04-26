@@ -40,4 +40,4 @@ eureka:
 service:
   security:
     application:
-      url: /auth
+      path: /auth
