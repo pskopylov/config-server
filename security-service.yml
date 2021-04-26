@@ -15,4 +15,4 @@ eureka:
       defaultZone: http://eureka-server:9001/eureka
 service:
   auth:
-    url: http://keycloak:8091/auth/realms/ecommerce/protocol/openid-connect/token
+    url: http://keycloak:8080/auth/realms/ecommerce/protocol/openid-connect/token
