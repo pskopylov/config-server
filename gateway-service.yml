@@ -20,12 +20,12 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8091/auth/realms/ecommerce
-          jwk-set-uri: http://keycloak:8091/auth/realms/ecommerce/protocol/openid-connect/certs
+          issuer-uri: http://keycloak:8080/auth/realms/ecommerce
+          jwk-set-uri: http://keycloak:8080/auth/realms/ecommerce/protocol/openid-connect/certs
       client:
         provider:
           keycloak:
-            issuer-uri: http://keycloak:8091/auth/realms/ecommerce
+            issuer-uri: http://keycloak:8080/auth/realms/ecommerce
             user-name-attribute: preferred_username
         registration:
           keycloak:
