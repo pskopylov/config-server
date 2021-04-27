@@ -13,3 +13,5 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-server:9001/eureka
+logging:
+  file: logs/elk-stack.log
