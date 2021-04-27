@@ -26,6 +26,8 @@ hystrix:
                 isolation:
                     thread:
                         timeoutInMilliseconds: 10000
+logging:
+  file: logs/elk-stack.log
 service:
   product:
     application:
