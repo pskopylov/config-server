@@ -1,11 +1,6 @@
 spring:
   application:
     name: security-service
-jwt:
-  header: Authentication
-  expires_in: 86400
-  secret: sgd34bwfAbfSBPpe0r8gwbg
-
 eureka:
   instance:
     appname: security-service
@@ -16,3 +11,5 @@ eureka:
 service:
   auth:
     url: http://keycloak:8080/auth/realms/ecommerce/protocol/openid-connect/token
+logging:
+  file: logs/elk-stack.log
