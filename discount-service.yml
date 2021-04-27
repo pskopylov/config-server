@@ -25,3 +25,5 @@ eureka:
       defaultZone: http://eureka-server:9001/eureka
     healthcheck:
       enabled: true
+logging:
+  file: logs/elk-stack.log
