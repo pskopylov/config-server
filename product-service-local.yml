@@ -39,5 +39,3 @@ kafka:
   topic: statistic-topic
 logging:
   file: logs/elk-stack.log
-  level:
-    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
