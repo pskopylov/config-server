@@ -16,4 +16,4 @@ kafka:
   group-id: test-consumer-group
   topic: statistic-topic
 logging:
-  file: logs/elk-stack.log
+  file: ELK/logs/elk-stack.log
