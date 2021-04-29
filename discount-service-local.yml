@@ -26,4 +26,4 @@ eureka:
     healthcheck:
       enabled: true
 logging:
-  file: logs/elk-stack.log
+  file: ELK/logs/elk-stack.log
