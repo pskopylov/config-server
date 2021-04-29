@@ -12,4 +12,4 @@ service:
   auth:
     url: http://keycloak:8080/auth/realms/ecommerce/protocol/openid-connect/token
 logging:
-  file: logs/elk-stack.log
+  file: ELK/logs/elk-stack.log
