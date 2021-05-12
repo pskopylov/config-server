@@ -45,3 +45,14 @@ service:
       url: availability-service:8080
 logging:
   file: ELK/logs/elk-stack.log
+management:
+  contextPath: /actuator
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    metrics:
+      enabled: true
