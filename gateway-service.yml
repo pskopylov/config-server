@@ -43,3 +43,11 @@ service:
       path: /auth
 logging:
   file: ELK/logs/elk-stack.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    metrics:
+      enabled: true
