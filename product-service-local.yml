@@ -41,6 +41,8 @@ logging:
   file: ELK/logs/elk-stack.log
 management:
   contextPath: /actuator
+  security:
+    enabled: false
   endpoints:
     web:
       exposure:
