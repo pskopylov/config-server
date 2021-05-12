@@ -18,6 +18,8 @@ kafka:
 logging:
   file: ELK/logs/elk-stack.log
 management:
+  security:
+    enabled: false
   endpoints:
     web:
       exposure:
