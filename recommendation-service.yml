@@ -15,3 +15,11 @@ eureka:
       defaultZone: http://eureka-server:9001/eureka
 logging:
   file: ELK/logs/elk-stack.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    metrics:
+      enabled: true
