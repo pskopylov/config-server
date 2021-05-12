@@ -40,8 +40,7 @@ kafka:
 logging:
   file: ELK/logs/elk-stack.log
 management:
-  security:
-    enabled: false
+  contextPath: /actuator
   endpoints:
     web:
       exposure:
