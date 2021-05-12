@@ -13,3 +13,11 @@ service:
     url: http://localhost:8091/auth/realms/ecommerce/protocol/openid-connect/token
 logging:
   file: ELK/logs/elk-stack.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    metrics:
+      enabled: true
