@@ -41,6 +41,9 @@ service:
   security:
     application:
       path: /auth
+  actuator:
+    application:
+      path: /actuator/*
 logging:
   file: ELK/logs/elk-stack.log
 management:
